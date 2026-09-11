@@ -1,0 +1,33 @@
+services:
+  # ─── Backend: NestJS ────────────────────────────────
+  - type: web
+    name: live-inspector-api
+    runtime: node
+    region: singapore
+    plan: free
+    branch: main
+    rootDir: backend
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm run start:prod
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: FRONTEND_URL
+        sync: false          # dashboard se set karo
+
+  # ─── Frontend: Next.js ──────────────────────────────
+  - type: web
+    name: live-inspector-web
+    runtime: node
+    region: singapore
+    plan: free
+    branch: main
+    rootDir: frontend
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_API_URL
+        sync: false          # dashboard se set karo
