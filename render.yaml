@@ -14,7 +14,7 @@ services:
       - key: NODE_ENV
         value: production
       - key: FRONTEND_URL
-        sync: false          # dashboard se set karo
+        sync: false
 
   # ─── Frontend: Next.js ──────────────────────────────
   - type: web
@@ -30,4 +30,4 @@ services:
       - key: NODE_ENV
         value: production
       - key: NEXT_PUBLIC_API_URL
-        sync: false          # dashboard se set karo
+        sync: false
