@@ -1,10 +1,8 @@
-﻿<h1 align="center">Live API Inspector</h1>
+<h1 align="center">Live API Inspector</h1>
 
-<!-- Replace programmingpioneer with your GitHub username before pushing -->
+<p align="center"><em>Real-time webhook and HTTP request inspector — capture, view, and replay incoming API requests live in the browser.</em></p>
 
-<p align="center"><em>Real-time webhook and HTTP request inspector â€” capture, view, and replay incoming API requests live in the browser.</em></p>
-
-<p align="center"><strong>ðŸš€ Current Release: V1.0.0 â€” Live Edition | 2026</strong></p>
+<p align="center"><strong>🚀 Current Release: V1.0.0 — Live Edition | 2026</strong></p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/version-V1.0.0-blue?style=flat-square" alt="Version">
@@ -21,9 +19,9 @@
 
 ---
 
-## ðŸ“Œ Overview
+## 📌 Overview
 
-Live API Inspector lets you spin up a public endpoint, send HTTP requests to it from anywhere (Stripe, GitHub, your own backend), and watch them appear **instantly** in your browser â€” no refresh, no polling.
+Live API Inspector lets you spin up a public endpoint, send HTTP requests to it from anywhere (Stripe, GitHub, your own backend), and watch them appear **instantly** in your browser — no refresh, no polling.
 
 It provides:
 
@@ -41,29 +39,29 @@ It provides:
 
 ---
 
-## ðŸ–¼ï¸ Preview
+## 🖼️ Preview
 
 <!-- Preview image not yet included. Add a screenshot at docs/preview.png -->
 
 <p align="center">
-  <img src="./docs/preview.png" alt="Live API Inspector Preview" width="700">
+  <img src="./docs/static/Inspector-preview.png" alt="Live API Inspector Preview" width="700">
 </p>
 
 ---
 
-## ðŸ“¥ Download
+## 📥 Download
 
-Pre-built Windows executable â€” no Node.js installation required.
+Pre-built Windows executable — no Node.js installation required.
 
 <p align="center">
-  <a href="https://github.com/programmingpioneer/live-api-inspector/releases/latest/download/Live-API-Inspector-Setup.exe">
+  <a href="https://github.com/programmingpioneer/Live-APi-Inspector/releases/latest/download/Live-API-Inspector-Setup.exe">
     <img src="https://img.shields.io/badge/Download-Live--API--Inspector--Setup.exe-brightgreen?style=for-the-badge&logo=windows" alt="Download EXE">
   </a>
 </p>
 
 | Platform       | File                              | Status | Download |
 | -------------- | --------------------------------- | ------ | -------- |
-| Windows 64-bit | `Live-API-Inspector-Setup.exe`    | Stable | [â¬‡ï¸ Download](https://github.com/programmingpioneer/live-api-inspector/releases/latest/download/Live-API-Inspector-Setup.exe) |
+| Windows 64-bit | `Live-API-Inspector-Setup.exe`    | Stable | [⬇️ Download](https://github.com/programmingpioneer/Live-APi-Inspector/releases/latest/download/Live-API-Inspector-Setup.exe) |
 
 ### Run
 
@@ -74,17 +72,21 @@ Pre-built Windows executable â€” no Node.js installation required.
 
 ---
 
-## ðŸ“¦ Releases
+## 📦 Releases
 
 | Version | Release Date   | Status     | Download |
 | ------- | -------------- | ---------- | -------- |
-| v1.0.0  | September 2026 | âœ… Stable | [Live-API-Inspector-Setup.exe](https://github.com/programmingpioneer/live-api-inspector/releases/latest/download/Live-API-Inspector-Setup.exe) |
+| v1.0.0  | September 2026 | ✅ Stable | [Live-API-Inspector-Setup.exe](https://github.com/programmingpioneer/Live-APi-Inspector/releases/latest/download/Live-API-Inspector-Setup.exe) |
 
 ---
 
-## âœ¨ Features
+### 📋 Changelog
 
-### ðŸ”Œ Endpoint Management
+See all changes in [v1.0.0](https://github.com/programmingpioneer/Live-APi-Inspector/commits/v1.0.0).
+
+## ✨ Features
+
+### 🔌 Endpoint Management
 
 - Create inspector endpoints
 - Auto-generated slugs
@@ -93,7 +95,7 @@ Pre-built Windows executable â€” no Node.js installation required.
 - Endpoint history persistence
 - Endpoint list view
 
-### ðŸ“¡ Real-Time Capture
+### 📡 Real-Time Capture
 
 - Ingest any HTTP request (any method)
 - Capture method, path, headers, body, query, timestamp
@@ -102,7 +104,7 @@ Pre-built Windows executable â€” no Node.js installation required.
 - Per-endpoint rooms
 - Reconnect on network loss
 
-### ðŸ” Request Inspection
+### 🔍 Request Inspection
 
 - Full request details panel
 - Pretty-printed JSON body
@@ -112,7 +114,7 @@ Pre-built Windows executable â€” no Node.js installation required.
 - Empty states for no requests
 - Loading skeletons
 
-### ðŸ” Replay Engine
+### 🔁 Replay Engine
 
 - Replay any captured request
 - Target any URL
@@ -120,7 +122,7 @@ Pre-built Windows executable â€” no Node.js installation required.
 - Replay drawer UI
 - Result feedback
 
-### ðŸŽ¨ UI / UX
+### 🎨 UI / UX
 
 - Dark theme
 - Responsive interface
@@ -133,7 +135,7 @@ Pre-built Windows executable â€” no Node.js installation required.
 - Skeleton loading states
 - Accessible markup
 
-### ðŸ–¥ï¸ Desktop App
+### 🖥️ Desktop App
 
 - Electron-wrapped desktop build
 - Bundled NestJS backend
@@ -145,7 +147,7 @@ Pre-built Windows executable â€” no Node.js installation required.
 
 ---
 
-## ðŸ› ï¸ Tech Stack
+## 🛠️ Tech Stack
 
 | Layer            | Technology                     |
 | ---------------- | ------------------------------ |
@@ -162,7 +164,7 @@ Pre-built Windows executable â€” no Node.js installation required.
 
 ---
 
-## ðŸ“‹ Requirements
+## 📋 Requirements
 
 - Node.js 20 or newer
 - npm 10 or newer
@@ -173,13 +175,13 @@ After dependencies are installed, the core application does **not** require any 
 
 ---
 
-## ðŸš€ Installation
+## 🚀 Installation
 
 ### Windows
 
 ```powershell
-git clone https://github.com/programmingpioneer/live-api-inspector.git
-cd live-api-inspector
+git clone https://github.com/programmingpioneer/Live-APi-Inspector.git
+cd Live-APi-Inspector
 
 # backend
 cd backend
@@ -193,8 +195,8 @@ npm install
 ### Linux / macOS
 
 ```
-git clone https://github.com/programmingpioneer/live-api-inspector.git
-cd live-api-inspector
+git clone https://github.com/programmingpioneer/Live-APi-Inspector.git
+cd Live-APi-Inspector
 
 cd backend && npm install
 cd ../frontend && npm install
@@ -202,19 +204,19 @@ cd ../frontend && npm install
 
 ---
 
-## ðŸ First Run
+## 🏁 First Run
 
 ```
 Start Backend
-      â†“
+      ↓
 Start Frontend
-      â†“
+      ↓
 Open Browser
-      â†“
+      ↓
 Create Endpoint
-      â†“
+      ↓
 Send Request
-      â†“
+      ↓
 Watch It Appear Live
 ```
 
@@ -230,19 +232,18 @@ Watch It Appear Live
 
 ---
 
-## ðŸ”‘ Environment Variables
+## 🔑 Environment Variables
 
-| Location â†•â–¾ | Variable â†•â–¾ | Purpose â†•â–¾ |
+| Location | Variable | Purpose |
 |---|---|---|
-| âˆ’frontend | `NEXT_PUBLIC_API_URL` | Backend base URL (default `http://localhost:4000`) |
-| âˆ’backend | see `backend/.env.example` | Backend runtime configuration |
-âš™
+| frontend | `NEXT_PUBLIC_API_URL` | Backend base URL (default `http://localhost:4000`) |
+| backend | see `backend/.env.example` | Backend runtime configuration |
 
 Frontend template: `frontend/.env.local.example`
 
 ---
 
-## ðŸ’¾ Data Storage
+## 💾 Data Storage
 
 ### Request History
 
@@ -258,13 +259,13 @@ No external file uploads are used in V1.
 
 ### Backups
 
-There is no built-in backup UI in V1 â€” the JSON file is portable and can be copied or versioned manually.
+There is no built-in backup UI in V1 — the JSON file is portable and can be copied or versioned manually.
 
 > Keep `.devtoll-data/` out of version control. It changes at runtime and is environment-specific.
 
 ---
 
-## ðŸ”’ Security
+## 🔒 Security
 
 - Zod schema validation on all inbound payloads
 - Backend has no auth in V1 (local-only tool)
@@ -276,11 +277,11 @@ There is no built-in backup UI in V1 â€” the JSON file is portable and can 
 
 ```
 Browser Input
-     â†“
+     ↓
 Validation
-     â†“
+     ↓
 Business Logic
-     â†“
+     ↓
 Persistence
 ```
 
@@ -290,29 +291,29 @@ The frontend is treated as untrusted for anything beyond UI state.
 
 ---
 
-## ðŸ—ï¸ Architecture
+## 🏗️ Architecture
 
 ```
                 Client Browser
-                      â”‚
-                      â–¼
+                      │
+                      ▼
               Next.js Frontend :3000
-                      â”‚
-       â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-       â”‚              â”‚              â”‚
-       â–¼              â–¼              â–¼
+                      │
+       ┌──────────────┼──────────────┐
+       │              │              │
+       ▼              ▼              ▼
    REST API      Socket.IO      Static Pages
-       â”‚              â”‚
-       â””â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”˜
-              â–¼
+       │              │
+       └──────┬───────┘
+              ▼
         NestJS Backend :4000
-              â”‚
-   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-   â–¼          â–¼          â–¼
+              │
+   ┌──────────┼──────────┐
+   ▼          ▼          ▼
 ingest    replay    persistence
 module    module    module
-              â”‚
-              â–¼
+              │
+              ▼
       .devtoll-data/endpoints.json
 ```
 
@@ -323,100 +324,102 @@ module    module    module
 
 ---
 
-## ðŸ“‚ Project Structure
+## 📂 Project Structure
 
 ```
-live-api-inspector/
-â”œâ”€â”€ backend/
-â”‚   â”œâ”€â”€ src/
-â”‚   â”‚   â”œâ”€â”€ endpoints/
-â”‚   â”‚   â”‚   â”œâ”€â”€ endpoints.controller.ts
-â”‚   â”‚   â”‚   â”œâ”€â”€ endpoints.module.ts
-â”‚   â”‚   â”‚   â”œâ”€â”€ endpoints.schema.ts
-â”‚   â”‚   â”‚   â””â”€â”€ endpoints.service.ts
-â”‚   â”‚   â”œâ”€â”€ gateway/
-â”‚   â”‚   â”‚   â”œâ”€â”€ gateway.gateway.ts
-â”‚   â”‚   â”‚   â””â”€â”€ gateway.module.ts
-â”‚   â”‚   â”œâ”€â”€ ingest/
-â”‚   â”‚   â”‚   â”œâ”€â”€ ingest.controller.ts
-â”‚   â”‚   â”‚   â”œâ”€â”€ ingest.module.ts
-â”‚   â”‚   â”‚   â”œâ”€â”€ ingest.service.ts
-â”‚   â”‚   â”‚   â””â”€â”€ types.ts
-â”‚   â”‚   â”œâ”€â”€ persistence/
-â”‚   â”‚   â”‚   â”œâ”€â”€ persistence.module.ts
-â”‚   â”‚   â”‚   â””â”€â”€ persistence.service.ts
-â”‚   â”‚   â”œâ”€â”€ replay/
-â”‚   â”‚   â”‚   â”œâ”€â”€ replay.controller.ts
-â”‚   â”‚   â”‚   â”œâ”€â”€ replay.module.ts
-â”‚   â”‚   â”‚   â”œâ”€â”€ replay.schema.ts
-â”‚   â”‚   â”‚   â””â”€â”€ replay.service.ts
-â”‚   â”‚   â”œâ”€â”€ app.module.ts
-â”‚   â”‚   â””â”€â”€ main.ts
-â”‚   â”œâ”€â”€ .env.example
-â”‚   â”œâ”€â”€ nest-cli.json
-â”‚   â”œâ”€â”€ package.json
-â”‚   â””â”€â”€ tsconfig.json
-â”‚
-â”œâ”€â”€ frontend/
-â”‚   â”œâ”€â”€ app/
-â”‚   â”‚   â”œâ”€â”€ about/
-â”‚   â”‚   â”œâ”€â”€ changelog/
-â”‚   â”‚   â”œâ”€â”€ contact/
-â”‚   â”‚   â”œâ”€â”€ docs/
-â”‚   â”‚   â”œâ”€â”€ endpoints/
-â”‚   â”‚   â”œâ”€â”€ features/
-â”‚   â”‚   â”œâ”€â”€ inspect/[slug]/
-â”‚   â”‚   â”œâ”€â”€ pricing/
-â”‚   â”‚   â”œâ”€â”€ privacy/
-â”‚   â”‚   â”œâ”€â”€ product/
-â”‚   â”‚   â”œâ”€â”€ terms/
-â”‚   â”‚   â”œâ”€â”€ globals.css
-â”‚   â”‚   â”œâ”€â”€ layout.tsx
-â”‚   â”‚   â””â”€â”€ page.tsx
-â”‚   â”œâ”€â”€ components/
-â”‚   â”‚   â”œâ”€â”€ inspector/
-â”‚   â”‚   â”œâ”€â”€ ui/
-â”‚   â”‚   â””â”€â”€ *.tsx
-â”‚   â”œâ”€â”€ hooks/
-â”‚   â”œâ”€â”€ lib/
-â”‚   â”œâ”€â”€ .env.local.example
-â”‚   â”œâ”€â”€ next.config.ts
-â”‚   â”œâ”€â”€ package.json
-â”‚   â””â”€â”€ tsconfig.json
-â”‚
-â”œâ”€â”€ electron/
-â”‚   â”œâ”€â”€ main.js
-â”‚   â”œâ”€â”€ preload.js
-â”‚   â”œâ”€â”€ package.json
-â”‚   â””â”€â”€ electron-builder.yml
-â”‚
-â”œâ”€â”€ scripts/
-â”‚   â”œâ”€â”€ build.ps1
-â”‚   â”œâ”€â”€ build-exe.ps1
-â”‚   â”œâ”€â”€ dev.ps1
-â”‚   â””â”€â”€ README.md
-â”‚
-â”œâ”€â”€ .github/
-â”‚   â”œâ”€â”€ workflows/
-â”‚   â”œâ”€â”€ ISSUE_TEMPLATE/
-â”‚   â””â”€â”€ PULL_REQUEST_TEMPLATE/
-â”‚
-â”œâ”€â”€ .gitignore
-â”œâ”€â”€ ELECTRON_BUILD.md
-â””â”€â”€ README.md
+Live-APi-Inspector/
+├── backend/
+│   ├── src/
+│   │   ├── endpoints/
+│   │   │   ├── endpoints.controller.ts
+│   │   │   ├── endpoints.module.ts
+│   │   │   ├── endpoints.schema.ts
+│   │   │   └── endpoints.service.ts
+│   │   ├── gateway/
+│   │   │   ├── gateway.gateway.ts
+│   │   │   └── gateway.module.ts
+│   │   ├── ingest/
+│   │   │   ├── ingest.controller.ts
+│   │   │   ├── ingest.module.ts
+│   │   │   ├── ingest.service.ts
+│   │   │   └── types.ts
+│   │   ├── persistence/
+│   │   │   ├── persistence.module.ts
+│   │   │   └── persistence.service.ts
+│   │   ├── replay/
+│   │   │   ├── replay.controller.ts
+│   │   │   ├── replay.module.ts
+│   │   │   ├── replay.schema.ts
+│   │   │   └── replay.service.ts
+│   │   ├── app.module.ts
+│   │   └── main.ts
+│   ├── .env.example
+│   ├── nest-cli.json
+│   ├── package.json
+│   └── tsconfig.json
+│
+├── frontend/
+│   ├── app/
+│   │   ├── about/
+│   │   ├── changelog/
+│   │   ├── contact/
+│   │   ├── docs/
+│   │   ├── endpoints/
+│   │   ├── features/
+│   │   ├── inspect/[slug]/
+│   │   ├── pricing/
+│   │   ├── privacy/
+│   │   ├── product/
+│   │   ├── terms/
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   ├── inspector/
+│   │   ├── ui/
+│   │   └── *.tsx
+│   ├── hooks/
+│   ├── lib/
+│   ├── .env.local.example
+│   ├── next.config.ts
+│   ├── package.json
+│   └── tsconfig.json
+│
+├── electron/
+│   ├── main.js
+│   ├── preload.js
+│   ├── package.json
+│   └── electron-builder.yml
+│
+├── scripts/
+│   ├── build.ps1
+│   ├── build-exe.ps1
+│   ├── dev.ps1
+│   └── README.md
+│
+├── docs/
+│   ├── ELECTRON_BUILD.md
+│   └── PUSH_AND_BUILD_GUIDE.md
+│
+├── .github/
+│   ├── workflows/
+│   ├── ISSUE_TEMPLATE/
+│   └── PULL_REQUEST_TEMPLATE/
+│
+├── .gitignore
+└── README.md
 ```
 
 ---
 
-## ðŸ”Œ API Endpoints
+## 🔌 API Endpoints
 
-| Method â†•â–¾ | Endpoint â†•â–¾ | Purpose â†•â–¾ |
+| Method | Endpoint | Purpose |
 |---|---|---|
-| âˆ’POST | `/api/v1/endpoints` | Create a new inspector endpoint (returns `{ slug }`) |
-| âˆ’POST | `/api/v1/inspect/:slug` | Ingest an incoming request |
-| âˆ’GET | `/api/v1/inspect/:slug/requests` | Fetch captured request history |
-| âˆ’POST | `/api/v1/replay` | Replay a captured request (`{ requestId, targetUrl }`) |
-âš™
+| POST | `/api/v1/endpoints` | Create a new inspector endpoint (returns `{ slug }`) |
+| POST | `/api/v1/inspect/:slug` | Ingest an incoming request |
+| GET | `/api/v1/inspect/:slug/requests` | Fetch captured request history |
+| POST | `/api/v1/replay` | Replay a captured request (`{ requestId, targetUrl }`) |
 
 ### Socket.IO
 
@@ -426,7 +429,7 @@ live-api-inspector/
 
 ---
 
-## ðŸ§ª Testing
+## 🧪 Testing
 
 ### Build Test
 
@@ -460,7 +463,7 @@ Invoke-RestMethod `
     -Body $body
 ```
 
-The request must appear in the browser **instantly** â€” no refresh.
+The request must appear in the browser **instantly** — no refresh.
 
 ### Desktop App Test
 
@@ -473,35 +476,35 @@ Then launch the built EXE from `electron/dist/`.
 
 ---
 
-## ðŸ› Troubleshooting
+## 🐛 Troubleshooting
 
-| Problem â†•â–¾ | Possible Solution â†•â–¾ |
+| Problem ↕▾ | Possible Solution ↕▾ |
 |---|---|
-| âˆ’`port 4000 already in use` | Kill the process on 4000 or change backend port |
-| âˆ’`port 3000 already in use` | Kill the process on 3000 or change frontend port |
-| âˆ’Socket does not connect | Verify `NEXT_PUBLIC_API_URL` matches the backend URL |
-| âˆ’Requests don't appear live | Check browser console for Socket.IO errors |
-| âˆ’`next build` fails on CI | Ensure `NEXT_PUBLIC_API_URL` is set at build time |
-| âˆ’Electron window is blank | Backend/frontend may not have started â€” check logs in dev console |
-| âˆ’EXE fails to launch | Run from terminal to see stderr, or check Windows Event Viewer |
-| âˆ’`.devtoll-data` file corrupt | Delete it and restart â€” the app recreates the file |
-âš™
+| −`port 4000 already in use` | Kill the process on 4000 or change backend port |
+| `port 3000 already in use` | Kill the process on 3000 or change frontend port |
+| Socket does not connect | Verify `NEXT_PUBLIC_API_URL` matches the backend URL |
+| Requests don't appear live | Check browser console for Socket.IO errors |
+| `next build` fails on CI | Ensure `NEXT_PUBLIC_API_URL` is set at build time |
+| Electron window is blank | Backend/frontend may not have started — check logs in dev console |
+| EXE fails to launch | Run from terminal to see stderr, or check Windows Event Viewer |
+| `.devtoll-data` file corrupt | Delete it and restart — the app recreates the file |
+⚙
 
 ---
 
-## ðŸ—ºï¸ Roadmap
+## 🗺️ Roadmap
 
-### V1 â€” Local Inspector âœ…
+### V1 — Local Inspector ✅
 
-- âœ… Real-time capture
-- âœ… Live socket stream
-- âœ… Replay engine
-- âœ… Multi-endpoint
-- âœ… Persistent JSON history
-- âœ… Dark UI
-- âœ… Desktop app (Electron)
+- ✅ Real-time capture
+- ✅ Live socket stream
+- ✅ Replay engine
+- ✅ Multi-endpoint
+- ✅ Persistent JSON history
+- ✅ Dark UI
+- ✅ Desktop app (Electron)
 
-### V2 â€” Persistence & Auth
+### V2 — Persistence & Auth
 
 - Database-backed storage (PostgreSQL / TiDB)
 - User accounts and API keys
@@ -509,7 +512,7 @@ Then launch the built EXE from `electron/dist/`.
 - Custom domains
 - Request search and filters
 
-### V3 â€” Cloud Platform
+### V3 — Cloud Platform
 
 - Hosted inspector
 - Team workspaces
@@ -528,11 +531,11 @@ Then launch the built EXE from `electron/dist/`.
 
 ---
 
-## ðŸ“Œ Release Information
+## 📌 Release Information
 
 ### Current Release
 
-**V1.0.0 â€” Live Edition**
+**V1.0.0 — Live Edition**
 
 ### Release Date
 
@@ -560,13 +563,13 @@ Desktop-Ready
 
 ### Download
 <p align="center">
-  <a href="https://github.com/programmingpioneer/live-api-inspector/releases/latest/download/Live-API-Inspector-Setup.exe">
+  <a href="https://github.com/programmingpioneer/Live-APi-Inspector/releases/latest/download/Live-API-Inspector-Setup.exe">
     <img src="https://img.shields.io/badge/Download-v1.0.0-brightgreen?style=for-the-badge&logo=windows" alt="Download v1.0.0">
   </a>
 </p>
 ---
 
-## ðŸ¤ Contributing
+## 🤝 Contributing
 
 Contributions are welcome.
 
@@ -584,13 +587,13 @@ See [`.github/CONTRIBUTING.md`](https://.github/CONTRIBUTING.md) for the full gu
 
 ---
 
-## ðŸ“„ License
+## 📄 License
 
 No license specified yet.
 
 ---
 
-## â­ Project Goal
+## ⭐ Project Goal
 
 Live API Inspector is built as a practical, real-world developer tool rather than a demo.
 
@@ -608,7 +611,7 @@ Practical local persistence
 Maintainable TypeScript
 ```
 
-The long-term goal is to evolve the project from a **local inspector** into a **full cloud platform** for teams â€” with authentication, multi-tenant storage, and webhook forwarding.
+The long-term goal is to evolve the project from a **local inspector** into a **full cloud platform** for teams — with authentication, multi-tenant storage, and webhook forwarding.
 
 ---
-<p align="center"><strong>Live API Inspector V1.0.0 â€” 2026</strong></p><p align="center">Made with â¤ï¸ using NestJS, Next.js, Socket.IO & Electron.</p>
+<p align="center"><strong>Live API Inspector V1.0.0 — 2026</strong></p><p align="center">Made with ❤️ using NestJS, Next.js, Socket.IO & Electron.</p>

@@ -64,3 +64,12 @@ Desktop.ini
 # ─── Misc ────────────────────────────────────────
 *.bak
 *.tmp
+
+# Local npm config
+electron/.npmrc
+
+# Local npm config
+electron/.npmrc
+
+# Local npm config
+electron/.npmrc
