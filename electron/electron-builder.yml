@@ -1,0 +1,91 @@
+appId: com.yourusername.liveapiinspector
+productName: Live API Inspector
+copyright: Copyright © 2026
+
+directories:
+  output: dist
+  buildResources: build
+
+files:
+  - main.js
+  - preload.js
+  - package.json
+  - "!**/*.md"
+  - "!**/*.map"
+
+extraResources:
+  # Backend: compiled + production deps
+  - from: ../backend/dist
+    to: backend/dist
+  - from: ../backend/package.json
+    to: backend/package.json
+  - from: ../backend/node_modules
+    to: backend/node_modules
+    filter:
+      - "**/*"
+      - "!**/*.ts"
+      - "!**/*.map"
+      - "!**/.bin/**"
+      - "!**/test/**"
+      - "!**/tests/**"
+
+  # Frontend: build output + production deps + config
+  - from: ../frontend/.next
+    to: frontend/.next
+    filter:
+      - "**/*"
+      - "!**/cache/**"
+  - from: ../frontend/public
+    to: frontend/public
+  - from: ../frontend/package.json
+    to: frontend/package.json
+  - from: ../frontend/next.config.ts
+    to: frontend/next.config.ts
+  - from: ../frontend/node_modules
+    to: frontend/node_modules
+    filter:
+      - "**/*"
+      - "!**/*.ts"
+      - "!**/*.map"
+      - "!**/.bin/**"
+      - "!**/test/**"
+      - "!**/tests/**"
+
+asar: true
+asarUnpack:
+  - "**/node_modules/sharp/**"
+
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+    - target: portable
+      arch: [x64]
+  icon: build/icon.ico
+  artifactName: "${productName}-Setup.${ext}"
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Live API Inspector
+  artifactName: "Live-API-Inspector-Setup.${ext}"
+
+portable:
+  artifactName: "Live-API-Inspector-Portable.${ext}"
+
+linux:
+  target: [AppImage]
+  category: Development
+  icon: build/icon.png
+  artifactName: "Live-API-Inspector.${ext}"
+
+mac:
+  target: [dmg]
+  category: public.app-category.developer-tools
+  icon: build/icon.icns
+  artifactName: "Live-API-Inspector.${ext}"
+
+publish: null

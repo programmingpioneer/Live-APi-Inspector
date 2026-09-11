@@ -1,0 +1,236 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 8px;
+}
+.headTitle {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.headCount {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--text-dim);
+  padding: 1px 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-xs);
+}
+
+.searchRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 12px 10px;
+  padding: 0 10px;
+  height: 32px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  color: var(--text-muted);
+}
+.searchRow:focus-within {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px var(--accent-tint);
+}
+.search {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 0.8125rem;
+  color: var(--text);
+}
+.search::placeholder {
+  color: var(--text-faint);
+}
+.clear {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0 2px;
+}
+.clear:hover {
+  color: var(--text);
+}
+
+.filters {
+  display: flex;
+  gap: 4px;
+  padding: 0 12px 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.filters::-webkit-scrollbar {
+  display: none;
+}
+.chip {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  padding: 4px 9px;
+  border-radius: var(--r-sm);
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  transition: color var(--dur-fast) var(--ease),
+    background var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease);
+  white-space: nowrap;
+}
+.chip:hover {
+  color: var(--text-dim);
+  background: var(--surface-2);
+}
+.chipOn {
+  color: var(--text);
+  background: var(--surface-3);
+  border-color: var(--border-strong);
+}
+
+.listWrap {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  border-top: 1px solid var(--border);
+}
+
+.list {
+  list-style: none;
+}
+
+.item {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  transition: background var(--dur-fast) var(--ease),
+    box-shadow var(--dur-fast) var(--ease);
+}
+.item:hover {
+  background: var(--surface-2);
+}
+
+.itemActive {
+  background: var(--accent-tint);
+  box-shadow: inset 2px 0 0 var(--accent), inset 0 0 24px rgba(124, 92, 255, 0.05);
+}
+
+.itemTop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.itemBottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+.method {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 1px 6px;
+  border-radius: var(--r-xs);
+  background: var(--surface-3);
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+.mGET {
+  color: #5aa6f0;
+  background: rgba(90, 166, 240, 0.1);
+}
+.mPOST {
+  color: #b39bff;
+  background: rgba(179, 155, 255, 0.1);
+}
+.mPUT {
+  color: #e0a336;
+  background: rgba(224, 163, 54, 0.1);
+}
+.mDELETE {
+  color: #e05656;
+  background: rgba(224, 86, 86, 0.1);
+}
+.mPATCH {
+  color: #24d17a;
+  background: rgba(36, 209, 122, 0.1);
+}
+
+.path {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.status {
+  color: var(--live);
+}
+.dotSep {
+  color: var(--text-faint);
+}
+
+/* Skeletons */
+.skels {
+  display: flex;
+  flex-direction: column;
+}
+.skelItem {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.skelRow1 {
+  height: 12px;
+  width: 62%;
+}
+.skelRow2 {
+  height: 10px;
+  width: 40%;
+}
+
+/* Empty */
+.empty {
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--text-muted);
+}
+.emptyIcon {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-faint);
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+.empty p {
+  font-size: 0.8125rem;
+}

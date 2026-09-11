@@ -1,0 +1,128 @@
+.section {
+  padding: 72px 0;
+  border-top: 1px solid var(--border);
+  background: linear-gradient(180deg, transparent, rgba(124, 92, 255, 0.025), transparent);
+}
+
+.head {
+  max-width: 560px;
+  margin-bottom: 36px;
+}
+
+.track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  padding-top: 26px;
+}
+
+.line {
+  position: absolute;
+  top: 26px;
+  left: 6%;
+  right: 6%;
+  height: 1px;
+  background: var(--border);
+  overflow: hidden;
+}
+.lineFlow {
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent),
+    transparent
+  );
+  opacity: 0;
+}
+.lineFlowOn {
+  opacity: 1;
+  animation: flow 4.5s var(--ease) infinite;
+}
+@keyframes flow {
+  0% {
+    left: -40%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.step {
+  position: relative;
+  padding-top: 22px;
+}
+.step::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1.6px solid var(--accent);
+  box-shadow: 0 0 0 4px rgba(124, 92, 255, 0.08);
+}
+
+.num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  color: var(--accent-soft);
+}
+
+.step h3 {
+  margin-top: 4px;
+  color: var(--text);
+}
+.step p {
+  margin-top: 6px;
+  color: var(--text-dim);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  max-width: 34ch;
+}
+
+@media (max-width: 800px) {
+  .track {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding-left: 22px;
+  }
+  .line {
+    top: 6%;
+    bottom: 6%;
+    left: 3px;
+    right: auto;
+    width: 1px;
+    height: auto;
+  }
+  .lineFlow {
+    top: -40%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(180deg, transparent, var(--accent), transparent);
+    animation: flowV 4.5s var(--ease) infinite;
+  }
+  @keyframes flowV {
+    0% {
+      top: -40%;
+    }
+    100% {
+      top: 100%;
+    }
+  }
+  .step::before {
+    left: -22px;
+  }
+  .section {
+    padding: 52px 0;
+  }
+}

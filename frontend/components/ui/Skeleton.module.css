@@ -1,0 +1,56 @@
+/* ============================================================
+   Skeleton primitive — subtle shimmer matching dark UI
+   ============================================================ */
+
+@keyframes skeletonShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.block,
+.blockStatic {
+  display: inline-block;
+  background-color: var(--surface-2, #18181c);
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.045) 45%,
+    rgba(255, 255, 255, 0.06) 50%,
+    rgba(255, 255, 255, 0.045) 55%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+}
+
+.block {
+  animation: skeletonShimmer 1.6s ease-in-out infinite;
+}
+
+.blockStatic {
+  /* no animation — for static elements like boxes */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .block {
+    animation: none;
+  }
+}
+
+/* Light theme adjustment — keep shimmer visible */
+:global([data-theme="light"]) .block,
+:global([data-theme="light"]) .blockStatic {
+  background-color: var(--surface-2, #f4f4f5);
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.03) 45%,
+    rgba(0, 0, 0, 0.05) 50%,
+    rgba(0, 0, 0, 0.03) 55%,
+    transparent 100%
+  );
+}

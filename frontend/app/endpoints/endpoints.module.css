@@ -1,0 +1,222 @@
+.page {
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans, system-ui);
+}
+
+.topbar {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-elev-1, var(--bg-elevated, #0f0f11));
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.brandMark {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, var(--accent), #4a3a8f);
+  box-shadow: 0 0 0 1px rgba(124, 92, 255, 0.3), 0 0 20px var(--accent-glow);
+}
+
+.back {
+  color: var(--text-dim, var(--text-secondary, #a1a1aa));
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: color 140ms ease;
+}
+.back:hover {
+  color: var(--text);
+}
+
+.main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+}
+
+.head {
+  margin-bottom: 24px;
+}
+
+.title {
+  margin: 0 0 6px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.sub {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-dim, #a1a1aa);
+  line-height: 1.5;
+  max-width: 520px;
+}
+
+.status {
+  color: var(--text-muted, #71717a);
+  font-size: 0.85rem;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 140ms ease, transform 140ms ease,
+    background 140ms ease;
+}
+
+.card:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-2);
+  transform: translateY(-2px);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+  flex-shrink: 0;
+}
+
+.slug {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.85rem;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.74rem;
+  color: var(--text-muted, #71717a);
+  font-family: var(--font-mono, monospace);
+}
+
+.open {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.open span {
+  transition: transform 140ms ease;
+}
+
+.card:hover .open span {
+  transform: translateX(3px);
+}
+
+.emptyCard {
+  text-align: center;
+  padding: 56px 24px;
+  background: var(--surface);
+  border: 1px dashed var(--border-strong);
+  border-radius: 14px;
+}
+
+.emptyCard h2 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.emptyCard p {
+  margin: 0 0 18px;
+  font-size: 0.85rem;
+  color: var(--text-dim, #a1a1aa);
+}
+
+.cta {
+  display: inline-block;
+  padding: 9px 20px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cta:hover {
+  opacity: 0.9;
+}
+
+.errorCard {
+  padding: 20px;
+  background: rgba(224, 86, 86, 0.08);
+  border: 1px solid rgba(224, 86, 86, 0.25);
+  border-radius: 12px;
+  color: var(--text-dim, #a1a1aa);
+  font-size: 0.85rem;
+}
+.errorCard strong {
+  display: block;
+  color: var(--text);
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+.errorCard p {
+  margin: 0 0 12px;
+  font-family: var(--font-mono, monospace);
+}
+.errorCard button {
+  padding: 6px 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+  border-radius: 7px;
+  color: var(--text);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .main { padding: 24px 16px 40px; }
+  .title { font-size: 1.35rem; }
+  .grid { grid-template-columns: 1fr; }
+}

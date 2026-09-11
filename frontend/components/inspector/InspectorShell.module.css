@@ -1,0 +1,591 @@
+/* ============================================================
+   InspectorShell — app shell + topbar + workspace layout
+   ============================================================ */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+/* -------- Top bar -------- */
+.topbar {
+  height: 56px;
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-elev-1);
+}
+
+.topLeft,
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.topRight {
+  justify-content: flex-end;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.brandMark {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, var(--accent), #4a3a8f);
+  box-shadow: 0 0 0 1px rgba(124, 92, 255, 0.3), 0 0 20px var(--accent-glow);
+}
+.brandText {
+  white-space: nowrap;
+}
+
+.topCenter {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.viewName {
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+}
+.connPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  padding: 4px 10px;
+  border-radius: var(--r-full);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-dim);
+}
+.connOk {
+  color: var(--live);
+  border-color: rgba(36, 209, 122, 0.25);
+}
+.connWarn {
+  color: var(--warn);
+  border-color: rgba(224, 163, 54, 0.28);
+}
+.connBad {
+  color: var(--error);
+  border-color: rgba(224, 86, 86, 0.28);
+}
+
+.iconBtn {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--r-md);
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease),
+    background var(--dur-fast) var(--ease);
+}
+.iconBtn:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  margin-left: 4px;
+}
+
+/* -------- Connection banner -------- */
+.connectionBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 20px;
+  background: rgba(224, 86, 86, 0.08);
+  border-bottom: 1px solid rgba(224, 86, 86, 0.2);
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+}
+.connectionBanner strong {
+  color: var(--text);
+  font-weight: 600;
+}
+.connectionBanner button {
+  font-size: 0.8125rem;
+  padding: 6px 12px;
+  border-radius: var(--r-md);
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  transition: background var(--dur-fast) var(--ease);
+}
+.connectionBanner button:hover {
+  background: var(--surface-3);
+}
+
+/* -------- Error banner -------- */
+.errorBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 20px;
+  background: rgba(224, 86, 86, 0.08);
+  border-bottom: 1px solid rgba(224, 86, 86, 0.2);
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+}
+.errorBanner strong {
+  color: var(--text);
+  font-weight: 600;
+}
+.errorBanner button {
+  font-size: 0.8125rem;
+  padding: 6px 12px;
+  border-radius: var(--r-md);
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  transition: background var(--dur-fast) var(--ease);
+}
+.errorBanner button:hover {
+  background: var(--surface-3);
+}
+
+/* -------- Workspace -------- */
+.workspace {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr) 280px;
+}
+
+.colList,
+.colDetails,
+.colMeta {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.colList {
+  border-right: 1px solid var(--border);
+}
+.colMeta {
+  border-left: 1px solid var(--border);
+}
+
+/* ============================================================
+   Nav — workspace + tools dropdowns (NEW)
+   ============================================================ */
+
+.navMenuWrap {
+  position: relative;
+  display: inline-flex;
+}
+
+/* ---------- Trigger ---------- */
+.navTrigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease),
+    background var(--dur-fast) var(--ease);
+}
+.navTrigger:hover {
+  border-color: var(--border-strong);
+}
+.navTriggerOpen {
+  border-color: var(--accent) !important;
+  background: var(--surface-3) !important;
+}
+
+.navWsDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+  flex-shrink: 0;
+}
+.navWsName {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.navChevron {
+  color: var(--text-muted);
+  transition: transform var(--dur-fast) var(--ease);
+}
+.navTriggerOpen .navChevron {
+  transform: rotate(180deg);
+}
+
+/* ---------- Dropdown (animated) ---------- */
+@keyframes navDropIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes navItemIn {
+  from {
+    opacity: 0;
+    transform: translateX(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.navDropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 240px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-lg, 12px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  padding: 6px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transform-origin: top left;
+  animation: navDropIn 160ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.navDropdownRight {
+  left: auto;
+  right: 0;
+  transform-origin: top right;
+}
+
+.navDropdownHeader {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  padding: 6px 10px 4px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  background: transparent;
+  border: none;
+  border-radius: var(--r-md);
+  color: var(--text-dim);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+  animation: navItemIn 180ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.navItem:hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+.navItemActive {
+  background: var(--surface-3);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.navItemDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  flex-shrink: 0;
+  transition: background var(--dur-fast) var(--ease);
+}
+.navItemActive .navItemDot {
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.navItemLabel {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.navCheck {
+  color: var(--live);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.navDelete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--dur-fast) var(--ease),
+    background var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+.navItem:hover .navDelete {
+  opacity: 0.7;
+}
+.navDelete:hover {
+  opacity: 1;
+  background: rgba(224, 86, 86, 0.12);
+  color: var(--error);
+}
+
+.navPlus {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1rem;
+  width: 12px;
+  text-align: center;
+  line-height: 1;
+}
+
+.navDivider {
+  height: 1px;
+  background: var(--border);
+  margin: 4px 2px;
+}
+
+/* ---------- Create row ---------- */
+.navCreateRow {
+  display: flex;
+  gap: 6px;
+  padding: 4px;
+}
+.navInput {
+  flex: 1;
+  min-width: 0;
+  padding: 6px 10px;
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.78rem;
+  outline: none;
+  transition: border-color var(--dur-fast) var(--ease);
+}
+.navInput:focus {
+  border-color: var(--accent);
+}
+
+.navCreateBtn {
+  padding: 6px 12px;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--r-md);
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity var(--dur-fast) var(--ease);
+}
+.navCreateBtn:hover {
+  opacity: 0.9;
+}
+.navCreateBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ---------- Theme buttons ---------- */
+.navThemeRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding: 4px;
+}
+.navThemeBtn {
+  padding: 7px 10px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  color: var(--text-dim);
+  font-family: inherit;
+  font-size: 0.76rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease);
+}
+.navThemeBtn:hover {
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+.navThemeBtnActive {
+  background: var(--surface-3);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.navKbd {
+  padding: 1px 6px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Nav links ---------- */
+.navLinks {
+  display: flex;
+  gap: 2px;
+  margin-left: 4px;
+}
+.navLink {
+  padding: 5px 10px;
+  border-radius: var(--r-md);
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+.navLink:hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 1180px) {
+  .workspace {
+    grid-template-columns: 300px minmax(0, 1fr);
+  }
+  .colMeta {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .navLinks {
+    display: none;
+  }
+  .brandText {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    grid-template-columns: auto 1fr auto;
+  }
+  .viewName {
+    display: none;
+  }
+
+  .navWsName {
+    max-width: 80px;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+
+  .colList,
+  .colDetails {
+    grid-area: 1 / 1;
+    transition: transform var(--dur) var(--ease),
+      opacity var(--dur) var(--ease);
+  }
+
+  .workspace[data-mobile-panel="list"] .colDetails {
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .workspace[data-mobile-panel="details"] .colList {
+    transform: translateX(-24%);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .colList {
+    border-right: none;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .navDropdown,
+  .navItem,
+  .navChevron,
+  .navTrigger {
+    animation: none !important;
+    transition: none !important;
+  }
+}

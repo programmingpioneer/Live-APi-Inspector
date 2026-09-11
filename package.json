@@ -1,0 +1,14 @@
+{
+  "name": "live-api-inspector",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Real-time webhook and HTTP request inspector",
+  "scripts": {
+    "dev": "powershell -ExecutionPolicy Bypass -File scripts/dev.ps1",
+    "build": "powershell -ExecutionPolicy Bypass -File scripts/build.ps1",
+    "build:exe": "powershell -ExecutionPolicy Bypass -File scripts/build-exe.ps1",
+    "release": "powershell -ExecutionPolicy Bypass -File scripts/release.ps1",
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "clean": "powershell -Command \"Remove-Item -Recurse -Force backend/dist, backend/node_modules, frontend/.next, frontend/node_modules, electron/node_modules, electron/dist -ErrorAction SilentlyContinue\""
+  }
+}

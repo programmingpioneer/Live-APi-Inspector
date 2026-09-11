@@ -1,0 +1,486 @@
+.page {
+  padding-top: var(--navbar-h);
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* ============ Hero ============ */
+.hero {
+  padding: 88px 0 40px;
+  text-align: center;
+  position: relative;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 6px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-full);
+  background: var(--surface);
+}
+
+.title {
+  margin-top: 22px;
+  font-size: clamp(2.25rem, 5.5vw, 3.75rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+.accent {
+  color: var(--accent-soft);
+  text-shadow: 0 0 48px var(--accent-glow);
+}
+
+.lead {
+  margin-top: 18px;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text-dim);
+  max-width: 56ch;
+  margin-inline: auto;
+}
+
+.ctas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #fff;
+  background: var(--accent);
+  border-radius: var(--r-md);
+  transition: background 0.15s ease, box-shadow 0.15s ease,
+    transform 0.1s ease;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset,
+    0 12px 32px rgba(0, 0, 0, 0.35);
+}
+.primary:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 10px 32px var(--accent-glow), 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+.primary:active {
+  transform: translateY(1px);
+}
+
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  font-size: 0.9375rem;
+  color: var(--text-dim);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  transition: color 0.15s ease, border-color 0.15s ease,
+    background 0.15s ease;
+}
+.secondary:hover {
+  color: var(--text);
+  border-color: var(--accent-dim);
+  background: var(--surface-2);
+}
+
+/* ============ Plan card ============ */
+.planSection {
+  padding: 40px 0 32px;
+}
+
+.planCard {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(124, 92, 255, 0.08) 0%,
+    var(--surface) 40%,
+    var(--surface) 100%
+  );
+  border: 1px solid var(--accent-dim);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(124, 92, 255, 0.12),
+    0 0 80px rgba(124, 92, 255, 0.12);
+}
+
+/* left */
+.planLeft {
+  padding: 40px 40px 36px;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.planLabel {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+}
+
+.planName {
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--text);
+  margin-top: 4px;
+}
+
+.planTag {
+  font-size: 0.9375rem;
+  color: var(--text-dim);
+  max-width: 32ch;
+  margin-top: 6px;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-top: 22px;
+}
+.priceSymbol {
+  font-size: 1.25rem;
+  color: var(--text-dim);
+}
+.priceValue {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.pricePeriod {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-left: 6px;
+}
+
+.planCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 26px;
+  padding: 12px 22px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--r-md);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  align-self: flex-start;
+  transition: background 0.15s ease, box-shadow 0.15s ease,
+    transform 0.1s ease;
+  box-shadow: 0 10px 28px rgba(124, 92, 255, 0.35);
+}
+.planCta:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 14px 40px var(--accent-glow);
+}
+.planCta:active {
+  transform: translateY(1px);
+}
+
+.quickBadges {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 22px;
+  padding: 0;
+}
+.quickBadges li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+.quickBadges svg {
+  color: var(--live);
+}
+
+/* right */
+.planRight {
+  padding: 40px 40px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.featuresLabel {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.featureList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+.featureItem svg {
+  color: var(--accent-soft);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* ============ Promise strip ============ */
+.promiseSection {
+  padding: 40px 0 56px;
+}
+
+.promiseGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.promiseCard {
+  height: 100%;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.promiseCard:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+
+.promiseIcon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--r-md);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--accent-soft);
+  margin-bottom: 14px;
+}
+
+.promiseTitle {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.promiseDesc {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ============ FAQ ============ */
+.faqSection {
+  padding: 32px 0 72px;
+}
+
+.faqTitle {
+  font-size: 1.75rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.faqList {
+  max-width: 720px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.faq {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 16px 20px;
+  transition: border-color 0.15s ease;
+}
+.faq:hover {
+  border-color: var(--border-strong);
+}
+.faq[open] {
+  border-color: var(--border-strong);
+}
+
+.faqQ {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text);
+}
+.faqQ::-webkit-details-marker {
+  display: none;
+}
+.faqQ::after {
+  content: "+";
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.faq[open] .faqQ::after {
+  content: "−";
+  color: var(--accent-soft);
+}
+
+.faqA {
+  margin-top: 10px;
+  font-size: 0.875rem;
+  color: var(--text-dim);
+  line-height: 1.65;
+}
+
+/* ============ Bottom CTA ============ */
+.ctaSection {
+  padding-bottom: 96px;
+}
+
+.cta {
+  position: relative;
+  text-align: center;
+  padding: 64px 32px;
+  background: linear-gradient(
+    120deg,
+    rgba(124, 92, 255, 0.14),
+    var(--surface)
+  );
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.ctaGlow {
+  position: absolute;
+  top: -60%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 160%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(124, 92, 255, 0.22),
+    transparent 60%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+.cta h2 {
+  font-size: 1.75rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+.cta p {
+  margin-top: 8px;
+  color: var(--text-dim);
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 13px 24px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--r-md);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transition: background 0.15s ease, box-shadow 0.15s ease,
+    transform 0.1s ease;
+}
+.ctaBtn:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 12px 36px var(--accent-glow);
+}
+.ctaBtn:active {
+  transform: translateY(1px);
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 900px) {
+  .planCard {
+    grid-template-columns: 1fr;
+  }
+  .planLeft {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 32px 28px 28px;
+  }
+  .planRight {
+    padding: 28px;
+  }
+  .promiseGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 56px 0 24px;
+  }
+  .planSection {
+    padding: 24px 0;
+  }
+  .planName {
+    font-size: 2.25rem;
+  }
+  .priceValue {
+    font-size: 2.75rem;
+  }
+  .ctaSection {
+    padding-bottom: 64px;
+  }
+  .cta {
+    padding: 44px 20px;
+  }
+}
