@@ -48,6 +48,9 @@ It provides:
 </p>
 
 ---
+[![Live Preview](https://img.shields.io/badge/🚀_Live_Preview-Visit_Now-4d6bfe?style=for-the-badge)](https://live-api-inspector.programmingpioneer.com/)
+
+> ✨ **Try it live** — [live-api-inspector.programmingpioneer.com](https://live-api-inspector.programmingpioneer.com/)
 
 ## 📥 Download
 
